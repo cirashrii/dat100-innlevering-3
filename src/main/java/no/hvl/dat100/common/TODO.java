@@ -11,7 +11,8 @@ public class TODO {
 
     //hello world! -grethe
     //Hei - Solfrid
-	
+    //hvordan går det -grethe
+
 	public static String constructor(String className) {
 				
 	   return "Konstruktøren for klassen " + className + " er ikke implementert";
