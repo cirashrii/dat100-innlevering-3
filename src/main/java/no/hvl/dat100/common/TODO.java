@@ -10,6 +10,7 @@ public class TODO {
 	}
 
     //hello world! -grethe
+    //Hei - Solfrid
 	
 	public static String constructor(String className) {
 				
