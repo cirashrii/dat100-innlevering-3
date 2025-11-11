@@ -33,17 +33,20 @@ public class Blogg {
 	}
 	
 	public Innlegg[] getSamling() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		return innleggtabell;
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
+        for (int i = 0; i < nesteledig; i++) {
+            if (innleggtabell[i].erLik(innlegg)) {
+                return i;
+            }
+        }
+        return -1;
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
+		return finnInnlegg(innlegg) != -1;
 	}
 
 	public boolean ledigPlass() {
