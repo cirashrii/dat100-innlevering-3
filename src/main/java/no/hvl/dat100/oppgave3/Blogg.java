@@ -3,20 +3,33 @@ package no.hvl.dat100.oppgave3;
 import no.hvl.dat100.common.TODO;
 import no.hvl.dat100.oppgave1.*;
 
+import javax.swing.text.html.InlineView;
+
 public class Blogg {
 
-	// TODO: objektvariable 
+	private Innlegg[] inleggtabell;
+    private int nesteledig;
 
 	public Blogg() {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
+        this.inleggtabell = new Innlegg[20];
+        this.nesteledig = 0;
 	}
 
 	public Blogg(int lengde) {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
+        this.inleggtabell = new Innlegg[lengde];
+        this.nesteledig = 0;
 	}
 
 	public int getAntall() {
-		throw new UnsupportedOperationException(TODO.method());
+		int antall = 0;
+
+        for (Innlegg innlegg : inleggtabell) {
+            if (innlegg != null) {
+                antall++;
+            }
+        }
+
+        return antall;
 	}
 	
 	public Innlegg[] getSamling() {
