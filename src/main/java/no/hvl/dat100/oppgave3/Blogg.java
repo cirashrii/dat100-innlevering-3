@@ -33,12 +33,12 @@ public class Blogg {
 	}
 	
 	public Innlegg[] getSamling() {
-		return innleggtabell;
+		return inleggtabell;
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
         for (int i = 0; i < nesteledig; i++) {
-            if (innleggtabell[i].erLik(innlegg)) {
+            if (inleggtabell[i].erLik(innlegg)) {
                 return i;
             }
         }
