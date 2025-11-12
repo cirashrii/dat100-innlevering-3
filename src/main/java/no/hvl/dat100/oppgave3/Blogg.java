@@ -7,23 +7,23 @@ import javax.swing.text.html.InlineView;
 
 public class Blogg {
 
-	private Innlegg[] inleggtabell;
+	private Innlegg[] innleggtabell;
     private int nesteledig;
 
 	public Blogg() {
-        this.inleggtabell = new Innlegg[20];
+        this.innleggtabell = new Innlegg[20];
         this.nesteledig = 0;
 	}
 
 	public Blogg(int lengde) {
-        this.inleggtabell = new Innlegg[lengde];
+        this.innleggtabell = new Innlegg[lengde];
         this.nesteledig = 0;
 	}
 
 	public int getAntall() {
 		int antall = 0;
 
-        for (Innlegg innlegg : inleggtabell) {
+        for (Innlegg innlegg : innleggtabell) {
             if (innlegg != null) {
                 antall++;
             }
@@ -33,12 +33,12 @@ public class Blogg {
 	}
 	
 	public Innlegg[] getSamling() {
-		return inleggtabell;
+		return innleggtabell;
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
         for (int i = 0; i < nesteledig; i++) {
-            if (inleggtabell[i].erLik(innlegg)) {
+            if (innleggtabell[i].erLik(innlegg)) {
                 return i;
             }
         }
