@@ -50,17 +50,27 @@ public class Blogg {
 	}
 
 	public boolean ledigPlass() {
-		throw new UnsupportedOperationException(TODO.method());
+        return nesteledig < innleggtabell.length;
 
 	}
 	
 	public boolean leggTil(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
+        if(ledigPlass() && !finnes(innlegg)){
+            innleggtabell[nesteledig] = innlegg;
+            nesteledig++;
+            return true;
+        }
+        else{
+            return false;
+        }
 	}
 	
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
+        String data = nesteledig +"\n";
+        for(int i=0; i<nesteledig; i++){
+            data += innleggtabell[i].toString();
+        }
+        return data;
 	}
 
 	// valgfrie oppgaver nedenfor
