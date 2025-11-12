@@ -31,7 +31,7 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-        return "BILDE" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + url + "\n";
+        return "BILDE\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + "et bilde\n" + url + "\n";
 	}
 
 
